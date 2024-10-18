@@ -12,7 +12,6 @@ def ShellSort(arr):
                 j -= gap
             arr[j] = temp
         gap //= 2  # Reduzir o gap pela metade
-    odenado(arr)
     return arr
 
 def odenado(lista):
