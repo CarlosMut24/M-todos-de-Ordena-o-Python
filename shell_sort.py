@@ -1,18 +1,18 @@
 import time
 import random
-def ShellSort(arr):
-    n = len(arr)
+def ShellSort(lista):
+    n = len(lista)
     gap = n // 2  # Inicialmente o gap é metade do tamanho da lista
     while gap > 0:
         for i in range(gap, n): # Fazer a ordenação por inserção para os elementos com o gap atual
-            temp = arr[i]
+            temp = lista[i]
             j = i
-            while j >= gap and arr[j - gap] > temp: # Comparar elementos a gap posições de distância
-                arr[j] = arr[j - gap]
+            while j >= gap and lista[j - gap] > temp: # Comparar elementos a gap posições de distância
+                lista[j] = lista[j - gap]
                 j -= gap
-            arr[j] = temp
+            lista[j] = temp
         gap //= 2  # Reduzir o gap pela metade
-    return arr
+    return lista
 
 def odenado(lista):
     for i in range(len(lista)-1):
