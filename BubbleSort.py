@@ -8,8 +8,6 @@ def BubbleSort(lista):
             if lista[j] > lista[j+1]:
                 # Troca se o elemento encontrado for maior que o próximo
                 lista[j], lista[j+1] = lista[j+1], lista[j]
-    odenado(lista)
-
     return lista
 
 def odenado(lista):
@@ -20,7 +18,6 @@ def odenado(lista):
 
 lista_numeros = [random.randint(0, 50000) for _ in range(50000)]
 #                                                        ^^^^^ quantidade de numeros na lista        
-
 inicio_tempo = time.time()
 
 lista_ordenada = BubbleSort(lista_numeros)
